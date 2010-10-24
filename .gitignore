@@ -3,6 +3,7 @@ log/**/*
 tmp/**/*
 bin/*
 vendor/gems/*
+vendor/bundle
 !vendor/gems/cache/
 .sass-cache/*
 .bundle/*
