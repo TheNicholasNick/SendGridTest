@@ -14,3 +14,6 @@ gem 'haml'
 # Padrino
 #gem 'padrino', "0.9.18"
 gem "padrino", :git => "git://github.com/padrino/padrino-framework.git"
+
+# extras
+gem "yajl-ruby"

@@ -7,3 +7,5 @@ vendor/bundle
 !vendor/gems/cache/
 .sass-cache/*
 .bundle/*
+config/pubnub_keys.rb
+public/*.html

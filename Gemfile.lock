@@ -65,6 +65,7 @@ GEM
     tzinfo (0.3.23)
     url_mount (0.2.1)
       rack
+    yajl-ruby (0.7.5)
 
 PLATFORMS
   ruby
@@ -75,3 +76,4 @@ DEPENDENCIES
   rack-flash
   rake
   thin
+  yajl-ruby
