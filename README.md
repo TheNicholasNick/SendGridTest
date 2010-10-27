@@ -3,8 +3,8 @@
 A simple ruby applicaiton to test if sendgrid.com post actions are working properly.
 
 I was having trouble verifying that sendgrid was working with an application that I wasn't developing.
-Needed a simple app that I could redirect certain URI's that could give information I needed, like sendgrid was sending info.
-The appliation being developed is built in Java and is running in Tomcat fronted by nginx.
+Needed a simple app that I could redirect specific URI's to, that could give tell me sendgrid was doing what is was suppose to.
+The application is being developed in Java and is running in Tomcat fronted by nginx.
 So all I had to do was put a location rule in nginx and proxy the request to this app instead of Tomcat.
 
 ## Running
