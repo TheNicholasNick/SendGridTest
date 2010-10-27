@@ -30,7 +30,7 @@ That's it once this is running and you have updated your sendgrid to point at th
 
 Email Delivery. Simplifed.
 
-[SendGrid](http://www.sedngrid.com) transparently handles DKIM, SPF, ISP rate limits, content inspection, bounces, and spam reports to help users achieve higher deliverability. SendGrid integrates in minutes by just changing three SMTP settings.
+[SendGrid](http://www.sendgrid.com) transparently handles DKIM, SPF, ISP rate limits, content inspection, bounces, and spam reports to help users achieve higher deliverability. SendGrid integrates in minutes by just changing three SMTP settings.
 
 # About PubNub
 
