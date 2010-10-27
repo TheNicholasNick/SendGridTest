@@ -9,3 +9,5 @@ vendor/bundle
 .bundle/*
 config/pubnub_keys.rb
 public/*.html
+log/*
+
