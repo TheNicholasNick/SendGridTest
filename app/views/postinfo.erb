@@ -95,27 +95,6 @@
       <div class="clear"></div>
     </div>
 
-    <div id="get">
-      <h3 id="get-info">GET</h3>
-      <% unless request.GET.empty? %>
-        <table class="req">
-          <tr>
-            <th>Variable</th>
-            <th>Value</th>
-          </tr>
-           <% request.GET.sort_by { |k, v| k.to_s }.each { |key, val| %>
-          <tr>
-            <td><%=h key %></td>
-            <td class="code"><div><%=h val.inspect %></div></td>
-          </tr>
-          <% } %>
-        </table>
-      <% else %>
-        <p class="no-data">No GET data.</p>
-      <% end %>
-      <div class="clear"></div>
-    </div> <!-- /GET -->
-
     <div id="post">
       <h3 id="post-info">POST</h3>
       <% unless request.POST.empty? %>
