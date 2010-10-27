@@ -11,8 +11,8 @@
         padding: 0
       
 %body
-  %iframe#report{ :src => "", :width => "100%", :height => "100%", :frameborder => "0", :style => "margin: 0 auto; width: 100%; height: 100%; display: block;" }
+  %iframe#report{ :src => "", :width => "100%", :frameborder => "0", :class => "autoHeight" }
     
   = "<script src=\"http://pubnub-prod.appspot.com/js-api?pub-key=#{PUBNUB_PUBKEY}&sub-key=#{PUBNUB_SUBKEY}\"></script>"
-  = javascript_include_tag "script"
+  = javascript_include_tag "jquery-1.4.3.min", "autoHeight", "script"
     
