@@ -22,12 +22,12 @@ That's it once this is running and you have updated your sendgrid to point at th
 ## Notes
 
 * you need to put your keys in the file at config/pubnub_keys.rb
-** it is setup with demo keys however you will want to set the channel to something unique
+  * it is setup with demo keys however you will want to set the channel to something unique
 * set the post url's to something other than bare "/"
 * emails need to have a subject param and events need to have an event param
-** basically you can use this app to test any post to see what is being posted
+  * basically you can use this app to test any post to see what is being posted
 * it would be good if it had a backwards, forwards, pause button - let me know if you do this ;)
-** i've added a ul that is absolutely positioned top left, this good enough for now
+  * i've added a ul that is absolutely positioned top left, this good enough for now
 * probably be neat if this could then forward requests onto the actual destination
 
 # About Sendgrid
