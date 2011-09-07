@@ -12,10 +12,15 @@ SendGridTest.controllers  :base do
   post /.*/ do
     filename = "#{Time.now.to_i}.html"
     File.open(File.join(settings.public, filename), "w+") {|f| f.write(render("postinfo"))}
-    pubnub = Pubnub.new( PUBNUB_PUBKEY, PUBNUB_SUBKEY )
+    pubnub = Pubnub.new(
+      PUBNUB_PUBKEY,  ## PUBLISH_KEY
+      PUBNUB_SUBKEY,  ## SUBSCRIBE_KEY
+      "",             ## SECRET_KEY
+      false           ## SSL_ON?
+    )
     pubnub.publish({
       "channel" => "testing_sendgrid",
-      "message" => { "file" => "/#{filename}" }
+      "message" => { "file" => "/#{filename}", "to" => params["to"] }
     })
     "ok"
   end

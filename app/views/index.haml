@@ -9,10 +9,16 @@
         font-family: 'Lucida Grande','Lucida Sans Unicode','Garuda'
         margin: 0
         padding: 0
+      #history
+        left: 0
+        position: absolute
+        top: 0
       
 %body
   %iframe#report{ :src => "", :width => "100%", :frameborder => "0", :class => "autoHeight" }
-    
-  = "<script src=\"http://pubnub-prod.appspot.com/js-api?pub-key=#{PUBNUB_PUBKEY}&sub-key=#{PUBNUB_SUBKEY}\"></script>"
+  #history
+    %ul#links      
+  #pubnub{:"pub-key"=>PUBNUB_PUBKEY, :"sub-key"=>PUBNUB_SUBKEY, :ssl=>"off", :origin=>"pubsub.pubnub.com"}
+  = "<script src=\"http://cdn.pubnub.com/pubnub-3.1.min.js\"></script>"
   = javascript_include_tag "jquery-1.4.3.min", "autoHeight", "script"
     
