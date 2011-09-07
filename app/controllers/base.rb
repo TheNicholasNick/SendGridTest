@@ -20,7 +20,7 @@ SendGridTest.controllers  :base do
     )
     pubnub.publish({
       "channel" => "testing_sendgrid",
-      "message" => { "file" => "/#{filename}", "to" => params["to"] }
+      "message" => { "file" => "/#{filename}", "txt" => params["subject"] }
     })
     "ok"
   end
