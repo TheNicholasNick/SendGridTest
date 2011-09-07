@@ -20,5 +20,16 @@
     %ul#links      
   #pubnub{:"pub-key"=>PUBNUB_PUBKEY, :"sub-key"=>PUBNUB_SUBKEY, :ssl=>"off", :origin=>"pubsub.pubnub.com"}
   = "<script src=\"http://cdn.pubnub.com/pubnub-3.1.min.js\"></script>"
-  = javascript_include_tag "jquery-1.4.3.min", "autoHeight", "script"
+  = javascript_include_tag "jquery-1.4.3.min", "autoHeight"
+  :javascript
+    PUBNUB.subscribe({
+      channel: "testing_sendgrid_#{PUBNUB_CHANNEL}",
+      callback: function(message) { 
+        PUBNUB.attr(PUBNUB.$("report"), "src", message["file"]);
+        $("#links").append("<li><a href='"+message["file"]+"' target='report'>"+message["txt"]+"</a></li>")
+      },
+      error: function(e) {
+        console.log(e);
+      }
+    })  
     

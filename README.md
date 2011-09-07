@@ -14,17 +14,21 @@ So all I had to do was put a location rule in nginx and proxy the request to thi
       bundle install --deployment
       cp config/pubnub_keys.sample.rb config/pubnub_keys.rb
       nano config/pubnub_keys.rb
-      bundle exec padrino start
+      bundle exec padrino start -h 0.0.0.0
 
 That's it once this is running and you have updated your sendgrid to point at this server open your browser to the root of this application and watch for stuff to happen.
 (send an email to your parse incoming email domain, etc)
 
 ## Notes
 
-* You are going to need an account from pubnub.com.
-* You need to put your keys in the file at config/pubnub_keys.rb
+* you need to put your keys in the file at config/pubnub_keys.rb
+** it is setup with demo keys however you will want to set the channel to something unique
 * set the post url's to something other than bare "/"
+* emails need to have a subject param and events need to have an event param
+** basically you can use this app to test any post to see what is being posted
 * it would be good if it had a backwards, forwards, pause button - let me know if you do this ;)
+** i've added a ul that is absolutely positioned top left, this good enough for now
+* probably be neat if this could then forward requests onto the actual destination
 
 # About Sendgrid
 
